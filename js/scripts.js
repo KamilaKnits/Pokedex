@@ -1,23 +1,32 @@
-pokemonList = [
+let pokemonList = [
     {
         name: 'Bellsprout',
         height: '.7',
         type: ['grass', 'poison']
     },
     {
-        name: 'chansey',
+        name: 'Chansey',
         height: '1.1',
-        type: 'normal'
+        type: ['normal']
     }, {
         name: 'Sudowoodo',
         height: '1.2',
-        type: 'rock'
+        type: ['rock']
     }, {
         name: 'Mareep',
         height: '.6',
-        type: 'electric'
+        type: ['electric']
     }
 
 ];
 
-// pokedex.org as reference, create at least 3 objects in your PokemonLst
+
+
+for (let i=0; i < pokemonList.length; i++){
+    let pokemon = pokemonList[i];
+    document.write("<br>" + pokemon.name + " (height:" + " " + pokemon.height + ")" );
+    if (pokemon.height < .7){
+      document.write(" - Wow that's tiny!");
+    }
+  };
+
