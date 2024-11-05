@@ -22,12 +22,14 @@ let pokemonRepository = (function () {
     let button = document.createElement("button");
     button.innerText = pokemon.name;
     button.classList.add("btn", "btn-primary")
+
+    listItem.appendChild(button);
+    pokemonList.appendChild(listItem);
+
     button.addEventListener("click", function (event) {
       console.log("clicked")
       showDetails(pokemon);
-    })
-    listItem.appendChild(button);
-    pokemonList.appendChild(listItem);
+    });
   }
 
   function loadList() {
@@ -40,7 +42,6 @@ let pokemonRepository = (function () {
           detailsUrl: item.url
         };
         add(pokemon);
-
       });
     }).catch(function (e) {
       console.error(e);
