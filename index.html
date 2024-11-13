@@ -5,6 +5,9 @@
   <meta charset="'utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <title>Pokedex</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sedan:ital@0;1&family=Slackey&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link rel="stylesheet" href="css/styles.css">
 </head>
@@ -12,19 +15,19 @@
 <body>
 
   <!-- navbar   -->
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <nav class="navbar navbar-expand-xl navbar-light bg-light">
     <a class="navbar-brand" href="#">Pokemons</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
       aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
   </nav>
-  <div class="container mt-6">
+  <div class="container mt-4">
     <ul class="list-group pokemon-list"></ul>
   </div>
   <!-- modal   -->
   <div class="modal fade" id="pokemonModal" tabindex="-1" role="dialog" aria-labelledby="pokemonModalLabel">
-    <div class="modal-dialog" role="document">
+    <div class="modal-dialog modal-dialog-centered" role="document">
       <div class="modal-content">
         <div class="modal-header">
           <h5 class="modal-title" id="pokemonModalLabel">Pokemon Details</h5>
@@ -33,10 +36,11 @@
           </button>
         </div>
         <div class="modal-body">
-          <p class="pokemonHeight"></p>
           <img id="pokemonImage">
+          <p class="pokemonHeight"></p>
+          
         </div>
-        <div class="modal-footer">
+        <div class="modal-footer justify-content-center">
           <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
 
         </div>
