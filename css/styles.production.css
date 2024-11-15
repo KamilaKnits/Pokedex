@@ -1,0 +1,46 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
+body {
+    font-family: 'Slackey'; 
+    background-color: #dad7cd;
+  }
+  
+  .list-group-item {
+    position: relative;
+    display: block;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .btn {
+    background-color: #588187;
+    border-color: #588187; 
+  }
+  
+  .btn-primary {
+    background-color: #a3b18a;  
+  }
+  
+  .btn:hover {
+    background-color: #fdf0d5b4;
+    border-color: #fdf0d5b4;
+    color: #003049;
+  }
+  
+  .modal-title {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    text-align: center;
+  }
+  
+  .modal-body {
+    text-align: center;
+  }
+  
