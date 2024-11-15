@@ -1,6 +1,14 @@
+:root {
+  --lightBeige: #dad7cd;
+  --lightTeal: #588187;
+  --olive: #a3b18a;
+  --lightYellow: #fdf0d5b4;
+  --darkTeal: #003049;
+}
+
 body {
   font-family: 'Slackey'; 
-  background-color: #dad7cd ;
+  background-color: var(--lightBeige);
 }
 
 .list-group-item {
@@ -12,23 +20,28 @@ body {
 }
 
 .btn {
-  background-color:#588187;
-  border-color: #588187
-  
+  background-color: var(--lightTeal);
+  border-color: var(--lightTeal); 
 }
 
-
 .btn-primary {
-  background-color: #a3b18a;
-  
+  background-color: var(--olive);  
 }
 
 .btn:hover {
-  background-color: #fdf0d5b4;
-  border-color: #fdf0d5b4;
-	color: #003049;
+  background-color: var(--lightYellow);
+  border-color: var(--lightYellow);
+	color: var(--darkTeal);
 }
 
+.modal-title {
+  flex: 1;
+  text-align: center;
+}
+
+.modal-body {
+  text-align: center;
+}
 
 
 
