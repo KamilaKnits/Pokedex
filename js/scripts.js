@@ -4,8 +4,6 @@ let pokemonRepository = (function () {
   let apiUrl = 'https://pokeapi.co/api/v2/pokemon/?limit=150';
   let modalContainer = document.querySelector('#pokemonModal');
 
-
-  
   function add(pokemon) {
     pokemonList.push(pokemon);
   }
@@ -27,7 +25,6 @@ let pokemonRepository = (function () {
     pokemonList.appendChild(listItem);
 
     button.addEventListener("click", function (event) {
-      console.log("clicked")
       showDetails(pokemon);
     });
   }
@@ -48,7 +45,6 @@ let pokemonRepository = (function () {
     });
   }
 
-
   function loadDetails(pokemon) {
     let url = pokemon.detailsUrl;
     return fetch(url).then(function (response) {
@@ -63,14 +59,12 @@ let pokemonRepository = (function () {
     });
   }
 
-
   function showModal(title, text, img) {
     let modalTitle = document.querySelector("#pokemonModalLabel");
     let modalBody = document.querySelector(".modal-body");
     let pokemonHeight = document.querySelector(".pokemonHeight");
     let pokemonImage = document.querySelector("#pokemonImage");
 
-    console.log(title, text, img)
     modalTitle.innerText = title;
     pokemonHeight.innerText = text;
     pokemonImage.setAttribute('src', img);
@@ -80,15 +74,10 @@ let pokemonRepository = (function () {
       if (target === modalContainer) {
         hideModal();
       }
-
     });
-
   }
 
-
   function showDetails(pokemon) {
-    console.log(pokemon)
-
     pokemonRepository.loadDetails(pokemon).then(function () {
       showModal(
         pokemon.name,
@@ -99,7 +88,6 @@ let pokemonRepository = (function () {
     });
   }
 
-
   return {
     add: add,
     getAll: getAll,
@@ -109,8 +97,6 @@ let pokemonRepository = (function () {
     showDetails: showDetails
   };
 })();
-
-
 
 pokemonRepository.loadList().then(function () {
   pokemonRepository.getAll().forEach(function (pokemon) {
